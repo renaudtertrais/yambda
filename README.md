@@ -1,4 +1,4 @@
-# yambda
+# yambda [![npm package][npm-badge]][npm] [![Travis][travis-badge]][travis] [![Codecov][codecov-badge]][codecov]
 
 *This is a work in progress, more functions and documentation will come soon.*
 
@@ -100,3 +100,12 @@ Every ideas and contributions are welcomed.
 ## Licence
 
 MIT © 2016-present Renaud Tertrais
+
+[npm-badge]: https://img.shields.io/npm/v/yambda.svg?style=flat-square
+[npm]: https://www.npmjs.com/package/yambda
+
+[travis-badge]: https://img.shields.io/travis/renaudtertrais/yambda.svg?style=flat-square
+[travis]: https://travis-ci.org/renaudtertrais/yambda
+
+[codecov-badge]: https://img.shields.io/codecov/c/github/renaudtertrais/yambda.svg?style=flat-square
+[codecov]: https://codecov.io/gh/renaudtertrais/yambda
