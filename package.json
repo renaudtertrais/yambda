@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "ava --verbose",
-    "cover": "node scripts/cover.js && nyc npm run test",
+    "cover": "nyc npm run test",
     "postcover": "nyc report --reporter=lcov",
     "lint": "eslint src/**/*.js specs/**/*.js",
     "prebuild": "rimraf build && cpy '*.md' 'package.json' build",
