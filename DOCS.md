@@ -1,10 +1,8 @@
-# Documetation
-
-## Types
+# Types
 
 In this documentation, several words are use to groups javascript types together. They are described here.
 
-### Native
+## Native
 
 Native javascript types:
 
@@ -19,37 +17,58 @@ Native javascript types:
 - `Error`
 ...
 
-### Void
+## Void
 
 - `undefined`
 - `null`
 
-### Object
+## Object
 
 Here in **yambda** `Object` only designate plain javascript object.
 
-### List
+## List
 
 - `String`
 - `Array`
 
-### Class
+## Class
 
 Every [native](#native) except [void](#void) but including [custom class](#custom-class). As in javascript, classes are just functions, it designate the class constructor.
 
-### Custom Class
+## Custom Class
 
 Every javascript class created or imported from an another library.
 
-### Any
+## Any
 
 [native](#native) + [custom class](#custom-class)
 
-## HOF
+# HOF
 
 [Higher Order Functions](https://github.com/hemanth/functional-programming-jargon#higher-order-functions-hof)
 
-### curry(fn)
+## apply(fn, args)
+
+Apply an array of arguments to a function.
+
+#### Arguments
+
+1. `fn` *(Function)*: the function to be applied
+2. `args` *(Array)*: the array of arguments to apply
+
+#### Returns
+
+*(Any)*: the return of the `fn` function called with the arguments `args`.
+
+#### Examples
+
+```js
+const add = (a, b) => a + b;
+const values = [2, 3];
+apply(add, values); // 5
+```
+
+## curry(fn)
 
 [Currying](https://github.com/hemanth/functional-programming-jargon/blob/master/readme.md#currying)
 
@@ -85,28 +104,7 @@ sum4Curried(1, 2, 3)(4);    // 10
 sum4Curried(1, 2)(3, 4);    // 10
 ```
 
-### apply(fn, args)
-
-Apply an array of arguments to a function.
-
-#### Arguments
-
-1. `fn` *(Function)*: the function to be applied
-2. `args` *(Array)*: the array of arguments to apply
-
-#### Returns
-
-*(Any)*: the return of the `fn` function called with the arguments `args`.
-
-#### Examples
-
-```js
-const add = (a, b) => a + b;
-const values = [2, 3];
-apply(add, values); // 5
-```
-
-### swap(fn, b, a)
+## swap(fn, b, a)
 
 Change the order of a two parameters function.
 
@@ -133,9 +131,9 @@ mapMyArrayOn(inc); // [2, 3, 4]
 mapMyArrayOn(dec); // [0, 1, 2]
 ```
 
-## Assertion
+# Assertion
 
-### is(type, subject)
+## is(type, subject)
 
 Compare a define if `subject` has the type `type` or if `type` and `subject` have the same type.
 
@@ -170,7 +168,7 @@ class Foo {};
 is(Foo, new Foo()); // true
 ```
 
-### typeOf(value)
+## typeOf(value)
 
 Get the type of a `value`.
 
@@ -199,11 +197,11 @@ typeOf(new Foo()); // 'Foo'
 typeOf(new Bar()); // 'Bar'
 ```
 
-### typeName(value)
+## typeName(value)
 
 Same as [typeOf](#typeof-value) but if value is a [class](#class), it return the name of the [class](#class) instead of `"Function"`.
 
-## Guarded function
+# Guarded function
 
 ### mustBe(type, subject)
 
@@ -232,9 +230,10 @@ const add = (a, b) => num(a) + num(b);
 add(2, 3); // 5
 add('foo', 3) // TypeError: foo is not a(n) Number
 ```
-## Any types
 
-### clone(subject)
+# Any types
+
+## clone(subject)
 
 Return a fresh copy of subject. (Not a deep copy)
 
@@ -258,7 +257,7 @@ clone(arr); // [1, 2]
 arr === clone(arr); // false
 ```
 
-### map(fn, subject)
+## map(fn, subject)
 
 See [Functor](https://github.com/hemanth/functional-programming-jargon/blob/master/readme.md#functor);
 
@@ -281,7 +280,7 @@ inc([1, 2, 3]); // [2, 3, 4]
 inc({ a: 4, b: 5, c: 6 }); // { a: 5, b: 6, c: 7 }
 ```
 
-### reduce(fn, initialValue, subject)
+## reduce(fn, initialValue, subject)
 
 Iterate on `subject` and call `fn` with:
 - result: value that `fn` must return and that has the value of `initialValue` at the begening
@@ -320,9 +319,9 @@ const sumQty = reduce((res, { qty }) => res + qty, 0);
 const totalQty = sumQty(products); // 10
 ```
 
-## Object only
+# Object only
 
-### assign(a, b)
+## assign(a, b)
 
 Merge object `b` in object `a` with no mutation.
 
@@ -345,7 +344,7 @@ assign(a, b); // { foo: 5, bar: 'baz', baz: true }
 assign(b, a); // { foo: 42, bar: 'baz', baz: true }
 ```
 
-### keys(obj)
+## keys(obj)
 
 Returns an array of keys from the Object `obj`.
 
