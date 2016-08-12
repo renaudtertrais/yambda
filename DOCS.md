@@ -344,3 +344,22 @@ const b = { foo: 5, baz: true };
 assign(a, b); // { foo: 5, bar: 'baz', baz: true }
 assign(b, a); // { foo: 42, bar: 'baz', baz: true }
 ```
+
+### keys(obj)
+
+Returns an array of keys from the Object `obj`.
+
+#### Arguments
+
+1. `obj` *(Object)*
+
+#### Returns
+
+*(Array)*: an array of keys of `obj`.
+
+#### Examples
+
+```js
+keys({ foo: 1, bar: 2, baz: 3 }); // ['foo', 'bar', 'baz']
+keys({}); // []
+```
