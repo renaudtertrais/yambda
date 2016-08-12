@@ -106,6 +106,33 @@ const values = [2, 3];
 apply(add, values); // 5
 ```
 
+### swap(fn, b, a)
+
+Change the order of a two parameters function.
+
+#### Arguments
+
+1. `fn` *(Function)*: the function to be swap
+2. `b` *(Any)*: the second param of the original function
+2. `a` *(Any)*: the first param of the original function
+
+#### Returns
+
+*(Any)*: the same result as `fn`
+
+#### Examples
+
+```js
+const add = a => b => a + b;
+const inc = add(1);
+const dec = add(-1);
+const myArray = [1, 2, 3];
+
+const mapMyArrayOn = swap(map, myArray);
+mapMyArrayOn(inc); // [2, 3, 4]
+mapMyArrayOn(dec); // [0, 1, 2]
+```
+
 ## Assertion
 
 ### is(type, subject)

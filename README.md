@@ -30,13 +30,13 @@ import typeOf from 'yambda/typeOf';
 typeOf('foo');
 ```
 
-## Motivation
+## Motivations
 
-I was very impressed by how Haskell render complicated operations in a simply way, so I try to implement Haskell functions in javascript and this lead me to create this library.
+I was very impressed by how Haskell was rendering complicated operations more simple, so I tried to implement Haskell's functions in javascript and this lead me to create this library.
 
-The idea was also to enable functions such as `map()` or `reduce()` on whatever. So this mean to consider [any](DOCS.md#any) types as [functor](https://github.com/hemanth/functional-programming-jargon#functor), [applicative](https://github.com/hemanth/functional-programming-jargon#applicative-functor) or [monad](https://github.com/hemanth/functional-programming-jargon#monad).
+The idea is also to enable functions such as `map()` or `reduce()` to be use on any value. So this mean to consider [any](DOCS.md#any) types as [functor](https://github.com/hemanth/functional-programming-jargon#functor), [applicative](https://github.com/hemanth/functional-programming-jargon#applicative-functor) or [monad](https://github.com/hemanth/functional-programming-jargon#monad).
 
-But the approach is different from library such as [Immutable](https://facebook.github.io/immutable-js). Instead of wrapping a [native](DOCS.md#native) types inside an object with more methods, **yambda** can take (depending on the function) [any](DOCS.md#any) types and return a value with the same type. The problem with wrapping is that you need 3 step to do a simple operation:
+But the approach is different from libraries such as [Immutable](https://facebook.github.io/immutable-js). Instead of wrapping [native](DOCS.md#native) types inside objects with extra methods, **yambda** can take (depending on the function) [any](DOCS.md#any) types. The problem with wrapping is that you need 3 step to do a simple operation:
 
 ```js
 import { Map } from 'immutable';
@@ -51,7 +51,7 @@ const res = Map(obj).map(inc).toJS(); // { foo: 2, bar: 3 }
 const res2 = map(inc, obj); // { foo: 2, bar: 3 }
 ```
 
-**yambda** try also to be compatible with any libraries. When function accept [any](DOCS.md#any) type, it will try to use the object method first. So this mean that if you are working with [Immutable](https://facebook.github.io/immutable-js), you can also do:
+**yambda** try also to be compatible with any libraries. When functions accept [any](DOCS.md#any) types, it will try to use the object method first. So this mean that if you are working with [Immutable](https://facebook.github.io/immutable-js), you can also do:
 
 ```js
 import { Map } from 'immutable';
@@ -66,7 +66,7 @@ const res = map(inc, myMap); // Map({ foo: 2, bar: 3 })
 
 ### Functional
 
-**yambda** only expose functions. The goal is to [compose](https://github.com/hemanth/functional-programming-jargon#function-composition) an manipulate those functions in order to create new ones. **yambda**'s functions have a specific order in their arguments such as the subject of the function is always (when it makes sens) the last one in order to facilitate composition:
+**yambda** only exposes functions. The goal is to [compose](https://github.com/hemanth/functional-programming-jargon#function-composition) or manipulate those functions in order to create new ones. **yambda**'s functions's arguments have a specific order: the function's subject or taget is always (when it makes sens) the last one in order to facilitate [composition](https://github.com/hemanth/functional-programming-jargon#function-composition):
 
 ```js
 import map from 'yambda/map';
@@ -78,9 +78,9 @@ map(fn, subject);
 
 All functions of **yambda** are [pure](https://github.com/hemanth/functional-programming-jargon#purity) and immutable.
 
-### Curried but not fixed arity
+### Curring and arity
 
-All functions of **yambda** are [curried](https://github.com/hemanth/functional-programming-jargon#currying) by default but not they have not a fixed [arity](https://github.com/hemanth/functional-programming-jargon#arity) *(may change in the futur)*.
+All functions of **yambda** are [curried](https://github.com/hemanth/functional-programming-jargon#currying) by default. Each function in the curry chain does not has not a fixed [arity](https://github.com/hemanth/functional-programming-jargon#arity) *(may change in the futur)*. For mor information, see this [example](DOCS.md#examples) on the [curry](DOCS.md#curryfn) function.
 
 ## Inspiration
 
