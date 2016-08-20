@@ -1,0 +1,72 @@
+
+.CodeMirror.cm-s-github{
+
+  background: #F7F7F9;
+  color: #333;
+  font-family: Consolas, "Liberation Mono", Menlo,     Courier, monospace;
+  font-size: 12px;
+}
+
+  /* e.g. var, function */
+.CodeMirror.cm-s-github  .cm-keyword    { color: #a71d5d; }
+
+  /* e.g. #id */
+.CodeMirror.cm-s-github  .cm-atom       { color: #0086b3; }
+
+  /* e.g. 20 */
+.CodeMirror.cm-s-github  .cm-number     { color: #0086b3; }
+
+  /* e.g. px, em */
+.CodeMirror.cm-s-github  .cm-unit       { color: #d0782a; }
+
+  /* e.g. @include, [this] */
+.CodeMirror.cm-s-github  .cm-def        { color: #0086b3; }
+
+  /* e.g. $, i */
+.CodeMirror.cm-s-github  .cm-variable   { color: #0086b3; }
+
+  /* e.g. for key in [this], Markdown li */
+.CodeMirror.cm-s-github  .cm-variable-2 {  }
+
+  /* e.g. getElementbyId, CSS properties */
+.CodeMirror.cm-s-github  .cm-property   {  }
+
+  /* e.g. CoffeeScript ->, CSS colons */
+.CodeMirror.cm-s-github  .cm-operator   { color: #a71d5d; }
+
+  /* e.g. // comments */
+.CodeMirror.cm-s-github  .cm-comment    { color: #969896; }
+
+  /* e.g. "string" */
+.CodeMirror.cm-s-github  .cm-string     { color: #183691; }
+
+  /* e.g. some CSS values */
+.CodeMirror.cm-s-github  .cm-string-2   { color: #183691; }
+
+  /* e.g. @font-face */
+.CodeMirror.cm-s-github  .cm-meta       { }
+
+  /*  */
+.CodeMirror.cm-s-github  .cm-header     { color: #ff6400; }
+
+  /* e.g. HTML elements */
+.CodeMirror.cm-s-github  .cm-tag        { color: #63a35c; }
+
+  /* e.g. class="" id="" */
+.CodeMirror.cm-s-github  .cm-attribute  { color: #795da3; }
+
+  /* not sure if used */
+.CodeMirror.cm-s-github  .cm-strong     { color: #ddca7e; }
+
+  /* not sure if used */
+.CodeMirror.cm-s-github  .cm-em         { color: #ddca7e; }
+
+  /* e.g. .box */
+.CodeMirror.cm-s-github  .cm-qualifier  { color: #795da3; }
+
+  /* not sure if used */
+.CodeMirror.cm-s-github  .cm-builtin    { color: #ddca7e; }
+
+  /* HTML SPECIFIC */
+  /* e.g. markdown blockquote */
+.CodeMirror.cm-s-github  .box-html .cm-atom { color: #96b38a; }

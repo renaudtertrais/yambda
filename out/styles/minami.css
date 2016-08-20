@@ -1,0 +1,39 @@
+body{
+  font-size: 14px;
+}
+
+
+.CodeMirror {
+  height: auto;
+  line-height: 1.5;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+h4.name{
+  padding: 20px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  background-color: #0095dd;
+  color: #FFF;
+}
+
+.separation{
+  margin-bottom: 30px;
+  border: none;
+  border-top: 2px solid #ddd;
+}
+
+h4.name *{
+  color: #FFF;
+}
+
+.description {
+  font-size: 16px;
+}
+
+dl.param-type{
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 10px;
+}

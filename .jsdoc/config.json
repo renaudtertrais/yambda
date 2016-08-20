@@ -1,0 +1,9 @@
+{
+  "source": {
+    "include": [".jsdoc/categories.js", "src"],
+    "includePattern": ".+\\.js$"
+  },
+  "opts": {
+    "template": ".jsdoc/minami"
+  }
+}

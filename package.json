@@ -9,7 +9,9 @@
     "postcover": "nyc report --reporter=lcov",
     "lint": "eslint src/**/*.js specs/**/*.js",
     "prebuild": "rimraf build && cpy '*.md' 'package.json' build",
-    "build": "node scripts/build-index.js && babel --out-dir build src"
+    "build": "node scripts/build-index.js && babel --out-dir build src",
+    "pregenerate-doc": "rimraf out",
+    "generate-doc": "jsdoc -c .jsdoc/config.json"
   },
   "devDependencies": {
     "ava": "0.15.2",
@@ -26,6 +28,9 @@
     "eslint-plugin-jsx-a11y": "1.5.5",
     "eslint-plugin-react": "5.2.2",
     "glob": "7.0.5",
+    "jsdoc": "3.4.0",
+    "jsdoc-dash-template": "2.0.1",
+    "minami": "1.1.1",
     "nyc": "7.1.0",
     "rimraf": "2.5.4",
     "webpack": "1.13.1"
